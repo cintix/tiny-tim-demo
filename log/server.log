@@ -1,1 +1,4 @@
 [ERROR][2021-06-02 10:49:30.408] java.net.BindException: Address already in use
+[ERROR][2021-07-30 14:43:30.857] java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+[ERROR][2021-07-30 14:44:24.707] java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+[ERROR][2021-08-18 12:52:27.189] java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0

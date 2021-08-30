@@ -2,15 +2,10 @@
  */
 package demo;
 
-import demo.endpoint.HelloWorldRestEndPoint;
-import demo.entities.Channel;
+import demo.endpoint.HelloWorldRestEndPointImpl;
 import dk.cintix.tinyserver.rest.http.RestHttpServer;
 import dk.cintix.tinyserver.io.Log;
-import dk.cintix.tinyserver.jdbc.DataSourceManager;
-import dk.cintix.tinyserver.jdbc.EntityManager;
-import dk.cintix.tinyserver.jdbc.PooledDataSource;
 import java.net.InetSocketAddress;
-import java.util.List;
 
 /**
  *
@@ -23,16 +18,11 @@ public class Server extends RestHttpServer {
     private void start() {
         try {
 
-            PooledDataSource pooledDataSource = new PooledDataSource("jdbc:postgresql://localhost:5432/epgcore", "epgcore", "epgcore", 20);
-            DataSourceManager.addDataSource("jdbc/epg", pooledDataSource);
-
-            List<Channel> channels = EntityManager.create(Channel.class).loadAll();
-            for (Channel channel : channels) {
-                System.out.println(channel.toString());
-            }
+//            PooledDataSource pooledDataSource = new PooledDataSource("jdbc:postgresql://localhost:5432/epgcore", "epgcore", "epgcore", 20);
+//            DataSourceManager.addDataSource("jdbc/epg", pooledDataSource);
 
             bind(new InetSocketAddress("0.0.0.0", 9090));
-            addEndpoint("/api/hello", new HelloWorldRestEndPoint());
+            addEndpoint("/api/hello", new HelloWorldRestEndPointImpl());
 
             startServer();
         } catch (Exception exception) {
