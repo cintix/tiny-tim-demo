@@ -6,6 +6,7 @@ import demo.model.Person;
 import demo.model.ResponseModel;
 import dk.cintix.tinyserver.rest.annotations.Inject;
 import dk.cintix.tinyserver.rest.http.request.RestHttpRequest;
+import dk.cintix.tinyserver.rest.jsd.JsonServiceDescriptionEngine;
 import dk.cintix.tinyserver.rest.response.Response;
 import java.util.Calendar;
 import java.util.Date;
@@ -43,6 +44,11 @@ public class HelloWorldRestEndPointImpl implements HelloWorldRestEndPoint {
     public Response register(Person person) {
         System.out.println("person " + person);
         return new Response().OK();
+    }
+
+    @Override
+    public Response documentation() {
+        return new Response().OK().data(JsonServiceDescriptionEngine.generateServiceDefination("/api/hello", null, this));
     }
 
 }

@@ -32,5 +32,7 @@ public interface HelloWorldRestEndPoint {
     @POST
     @Action(consume = "application/json")
     public Response register(Person person);
-
+    
+    @Action(path = "doc")
+    public Response documentation();
 }

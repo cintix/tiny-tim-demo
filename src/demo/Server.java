@@ -24,6 +24,8 @@ public class Server extends RestHttpServer {
             bind(new InetSocketAddress("0.0.0.0", 9090));
             addEndpoint("/api/hello", new HelloWorldRestEndPointImpl());
 
+            setDocumentRoot("web");
+            
             startServer();
         } catch (Exception exception) {
             exception.printStackTrace();
