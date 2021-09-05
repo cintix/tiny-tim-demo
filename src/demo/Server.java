@@ -3,8 +3,10 @@
 package demo;
 
 import demo.endpoint.HelloWorldRestEndPointImpl;
+import demo.html.tag.CustomHTMLTag;
 import dk.cintix.tinyserver.rest.http.RestHttpServer;
 import dk.cintix.tinyserver.io.Log;
+import dk.cintix.tinyserver.web.engine.DocumentEngine;
 import java.net.InetSocketAddress;
 
 /**
@@ -25,6 +27,9 @@ public class Server extends RestHttpServer {
             addEndpoint("/api/hello", new HelloWorldRestEndPointImpl());
 
             setDocumentRoot("web");
+            
+            DocumentEngine.setTagPrefix("<demo-data");
+            DocumentEngine.addDataClass("current-time", CustomHTMLTag.class);
             
             startServer();
         } catch (Exception exception) {
