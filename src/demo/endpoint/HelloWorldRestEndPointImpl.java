@@ -48,7 +48,7 @@ public class HelloWorldRestEndPointImpl implements HelloWorldRestEndPoint {
 
     @Override
     public Response documentation() {
-        return new Response().OK().data(JsonServiceDescriptionEngine.generateServiceDefination("/api/hello", null, this));
+        return new Response().OK().model(JsonServiceDescriptionEngine.generateServiceDefination("/api/hello", null, this));
     }
 
 }
