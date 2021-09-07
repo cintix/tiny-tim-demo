@@ -11,7 +11,7 @@ public class Person {
     private String name;
     private int pinCode;
     private String email;
-
+    
     public String getName() {
         return name;
     }
