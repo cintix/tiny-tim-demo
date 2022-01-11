@@ -1,9 +1,9 @@
 package demo.managers;
 
 import demo.entities.Channel;
-import dk.cintix.tinyserver.jdbc.DataSourceManager;
-import dk.cintix.tinyserver.jdbc.EntityManager;
-import dk.cintix.tinyserver.jdbc.annotations.InjectConnection;
+import dk.cintix.application.server.jdbc.DataSourceManager;
+import dk.cintix.application.server.jdbc.EntityManager;
+import dk.cintix.application.server.jdbc.annotations.InjectConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

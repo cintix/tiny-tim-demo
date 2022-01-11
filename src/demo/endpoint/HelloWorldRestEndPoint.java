@@ -3,12 +3,12 @@
 package demo.endpoint;
 
 import demo.model.Person;
-import dk.cintix.tinyserver.rest.annotations.Action;
-import dk.cintix.tinyserver.rest.annotations.Cache;
-import dk.cintix.tinyserver.rest.annotations.POST;
-import dk.cintix.tinyserver.rest.annotations.Static;
-import dk.cintix.tinyserver.rest.http.Status;
-import dk.cintix.tinyserver.rest.response.Response;
+import dk.cintix.application.server.rest.annotations.Action;
+import dk.cintix.application.server.rest.annotations.Cache;
+import dk.cintix.application.server.rest.annotations.POST;
+import dk.cintix.application.server.rest.annotations.Static;
+import dk.cintix.application.server.rest.http.Status;
+import dk.cintix.application.server.rest.response.Response;
 
 /**
  *

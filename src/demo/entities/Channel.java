@@ -1,7 +1,7 @@
 package demo.entities;
 
 import demo.managers.ChannelManager;
-import dk.cintix.tinyserver.jdbc.annotations.Entity;
+import dk.cintix.application.server.jdbc.annotations.Entity;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;

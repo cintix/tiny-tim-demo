@@ -4,9 +4,9 @@ package demo;
 
 import demo.endpoint.HelloWorldRestEndPointImpl;
 import demo.html.tag.CustomHTMLTag;
-import dk.cintix.tinyserver.rest.http.RestHttpServer;
-import dk.cintix.tinyserver.io.Log;
-import dk.cintix.tinyserver.web.engine.DocumentEngine;
+import dk.cintix.application.server.rest.http.RestHttpServer;
+import dk.cintix.application.server.io.Log;
+import dk.cintix.application.server.web.engine.DocumentEngine;
 import java.net.InetSocketAddress;
 
 /**

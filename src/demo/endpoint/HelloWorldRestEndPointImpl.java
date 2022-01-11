@@ -4,10 +4,10 @@ package demo.endpoint;
 
 import demo.model.Person;
 import demo.model.ResponseModel;
-import dk.cintix.tinyserver.rest.annotations.Inject;
-import dk.cintix.tinyserver.rest.http.request.RestHttpRequest;
-import dk.cintix.tinyserver.rest.jsd.JsonServiceDescriptionEngine;
-import dk.cintix.tinyserver.rest.response.Response;
+import dk.cintix.application.server.rest.annotations.Inject;
+import dk.cintix.application.server.rest.http.request.RestHttpRequest;
+import dk.cintix.application.server.rest.jsd.JsonServiceDescriptionEngine;
+import dk.cintix.application.server.rest.response.Response;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
